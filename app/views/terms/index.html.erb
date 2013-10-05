@@ -22,7 +22,7 @@
         <td colspan='4'>
           <table class="table">
             <tr>
-              <% term.translations.order(:votes).each do |translation| %>
+              <% term.translations.order(votes: :desc).each do |translation| %>
                 <td>
                   <span> (<%= translation.votes %>)</span>
                   <%= translation.name %>
