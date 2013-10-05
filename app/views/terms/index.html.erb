@@ -18,6 +18,19 @@
         <td><%= link_to 'Edit', edit_term_path(term) %></td>
         <td><%= link_to 'Destroy', term, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <tr>
+        <td colspan='4'>
+          <table>
+            <tr cellpading>
+              <% term.translations.order(:votes).each do |translation| %>
+                <td> 
+                  <%= translation.name %>
+                </td>
+              <% end %>
+            </tr>
+          </table>
+        </td>
+      </tr>
     <% end %>
   </tbody>
 </table>
