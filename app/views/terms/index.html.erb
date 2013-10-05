@@ -23,9 +23,8 @@
           <table>
             <tr cellpading>
               <% term.translations.order(:votes).each do |translation| %>
-                <td> 
-                  <%= translation.name %>
-                </td>
+                <td><%= translation.name %></td>
+                <td><%= link_to '+1',vote_up_translation_path(translation) %></td>
               <% end %>
             </tr>
           </table>
