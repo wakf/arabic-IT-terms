@@ -4,4 +4,8 @@ class TranslationsController < ApplicationController
     @terms = Term.includes(:translations).all
   end
 
+  def show
+    
+  end
+  
 end

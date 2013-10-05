@@ -4,5 +4,6 @@ ArabicItTerms::Application.routes.draw do
   get '/translations' => 'translations#index'
 
   resources :terms
+  resources :translations
 
 end
