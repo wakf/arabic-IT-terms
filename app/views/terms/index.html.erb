@@ -1,9 +1,9 @@
 <h1>Listing terms</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>الاسم</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,17 +14,19 @@
     <% @terms.each do |term| %>
       <tr>
         <td><%= term.name %></td>
-        <td><%= link_to 'Show', term %></td>
-        <td><%= link_to 'Edit', edit_term_path(term) %></td>
-        <td><%= link_to 'Destroy', term, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'اظهار', term, :class => 'btn btn-mini btn-warning' %></td>
+        <td><%= link_to 'تعديل', edit_term_path(term), :class => 'btn btn-mini btn-info' %></td>
+        <td><%= link_to 'حذف', term, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-danger' %></td>
       </tr>
       <tr>
         <td colspan='4'>
-          <table>
-            <tr cellpading>
+          <table class="table">
+            <tr>
               <% term.translations.order(:votes).each do |translation| %>
-                <td><%= translation.name %></td>
-                <td><%= link_to '+1',vote_up_translation_path(translation) %></td>
+                <td>
+                  <%= translation.name %>
+                  <span> <%= link_to '+1',vote_up_translation_path(translation),:class => 'btn btn-success btn-mini' %> </span>
+                </td>
               <% end %>
             </tr>
           </table>
