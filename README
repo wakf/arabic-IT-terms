@@ -1,10 +1,11 @@
 Arabic It Terms
 ========================
 
-to contribute to this project, 
+To contribute to this project, 
 
 1- git clone https://github.com/baraabourghli/arabic-IT-terms.git
-2- for each new code change, follow this flow:
+
+2- to submit code changes, follow this flow:
 
 git checkout master
 
@@ -12,11 +13,11 @@ git pull origin master
 
 git checkout -b (the new feature branch name)
 
----- (do your coding)
+-- do your coding :) 
 
 git add .
 
-git commit -a -m 'your commit info '
+git commit -a -m 'your commit info'
 
 git checkout master
 
@@ -27,3 +28,5 @@ git checkout (the new feature branch name)
 git rebase master
 
 git push -u origin (the new feature branch name)
+
+-- send us a pull request
