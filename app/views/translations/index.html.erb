@@ -1,30 +1,17 @@
-<h1>Listing translations</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Translations</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @terms.each do |term| %>
-      <tr>
-        <td><%= term.name %></td>
-        <td><%= term.translations.map { |translation| translation.name }.join(', ') %></td>
-        <td>
-          <%= nested_form_for term do |f| %>
-            <%= f.fields_for :translations do |translation_form| %>
-              <%= translation_form.text_field :name %>
-              <%= translation_form.link_to_remove "Remove this translation" %>
-            <% end %>
-            <p><%= f.link_to_add "Add a translation", :translations %></p>
-            <%= f.submit 'save' %>
-          <% end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @terms.each do |term| %>
+  <div class='box'>
+    <h5 class='box-title'>Term: <%= term.name %></h5>
+    <ul class="nav nav-tabs nav-stacked">
+      <%= nested_form_for term, :class => 'form-horizontal' do |f| %>
+        <%= f.fields_for :translations do |translation_form| %>
+          <li>
+            <%= translation_form.text_field :name, :placeholder => 'Translation...' %>
+            <%= translation_form.link_to_remove 'X', :class => 'btn btn-danger btn-mini' %>
+          </li>
+        <% end %>
+        <%= f.link_to_add "Add new translation", :translations, :class => 'btn btn-success btn-mini' %>
+        <%= f.submit 'Save term', :class => 'btn btn-primary btn-mini' %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
