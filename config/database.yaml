@@ -3,15 +3,15 @@ development:
   encoding: unicode
   database: arabic-IT-terms_development
   pool: 5
-  username: nvuifncieefrjg
-  password: H2bYphClA5OQFid_cJCE_Rz5Hv
+  username: 
+  password: 
 test:
   adapter: postgresql
   encoding: unicode
   database: arabic-IT-terms_test
   pool: 5
-  username: nvuifncieefrjg
-  password: H2bYphClA5OQFid_cJCE_Rz5Hv
+  username: 
+  password: 
 production:
   adapter: postgresql
   encoding: unicode
