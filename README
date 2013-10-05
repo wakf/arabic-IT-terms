@@ -1,19 +1,26 @@
 Arabic It Terms
 ========================
 
-This application was generated with the rails_apps_composer gem:
-https://github.com/RailsApps/rails_apps_composer
-provided by the RailsApps Project:
-http://railsapps.github.io/
+to contribute to this project, follow this flow :
 
-________________________
+git checkout master
 
-Recipes:
-["apps4", "controllers", "core", "email", "extras", "frontend", "gems", "git", "init", "models", "prelaunch", "railsapps", "readme", "routes", "saas", "setup", "testing", "views"]
+git pull origin master
 
-Preferences:
-{:git=>true, :apps4=>"rails-bootstrap", :database=>"default", :unit_test=>false, :integration=>false, :fixtures=>false, :frontend=>"bootstrap", :bootstrap=>"sass", :email=>"none", :authentication=>false, :devise_modules=>false, :authorization=>false, :starter_app=>false, :form_builder=>"simple_form", :quiet_assets=>true, :local_env_file=>true, :better_errors=>true, :dev_webserver=>"unicorn", :prod_webserver=>"unicorn", :templates=>"haml", :continuous_testing=>"guard", :rvmrc=>true, :github=>true}
+git checkout -b (the new feature branch name)
 
-________________________
+---- (do your coding)
 
-License
+git add .
+
+git commit -a -m 'your commit info '
+
+git checkout master
+
+git pull origin master
+
+git checkout (the new feature branch name)
+
+git rebase master
+
+git push -u origin (the new feature branch name)
