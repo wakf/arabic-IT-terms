@@ -1,7 +1,10 @@
 Arabic It Terms
 ========================
 
-to contribute to this project, follow this flow :
+to contribute to this project, 
+
+1- git clone https://github.com/baraabourghli/arabic-IT-terms.git
+2- follow this flow :
 
 git checkout master
 
