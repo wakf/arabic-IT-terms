@@ -16,7 +16,7 @@ gem 'simple_form', '>= 3.0.0.rc'
 gem 'unicorn'
 gem 'nested_form'
 gem 'rails_12factor', group: :production
-
+gem 'newrelic_rpm'
 group :development do
   gem 'pry'
   gem 'thin'
