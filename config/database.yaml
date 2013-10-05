@@ -1,0 +1,21 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: arabic-IT-terms_development
+  pool: 5
+  username: aite
+  password:
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: arabic-IT-terms_test
+  pool: 5
+  username: aite
+  password:
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: arabic-IT-terms_production
+  pool: 5
+  username: aite
+  password:
