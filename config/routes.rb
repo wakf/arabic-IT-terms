@@ -1,10 +1,8 @@
 ArabicItTerms::Application.routes.draw do
 
-  root :to => 'terms#new'
-  get '/edit' => 'edit#index'
+  root :to => 'terms#index'
+  get '/translations' => 'translations#index'
 
-  resources :terms do
-    resources :translations
-  end
+  resources :terms
 
 end

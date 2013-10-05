@@ -43,7 +43,7 @@ class TermsController < ApplicationController
   def update
     respond_to do |format|
       if @term.update(term_params)
-        format.html { redirect_to @term, notice: 'Term was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Term was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -69,7 +69,8 @@ class TermsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    # Fuck that, permit everything
     def term_params
-      params.require(:term).permit(:name)
+      params.require(:term).permit!
     end
 end
