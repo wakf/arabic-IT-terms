@@ -1,3 +1,7 @@
 ArabicItTerms::Application.routes.draw do
-  root :to => 'visitors#new'
+  resources :translations
+
+  resources :terms
+
+  root :to => 'terms#new'
 end
