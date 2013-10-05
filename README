@@ -5,7 +5,7 @@ To contribute to this project,
 
 1- git clone https://github.com/baraabourghli/arabic-IT-terms.git
 
-2- to submit code changes, follow this flow:
+2- To submit code changes, follow this flow:
 
 git checkout master
 
@@ -13,7 +13,7 @@ git pull origin master
 
 git checkout -b (the new feature branch name)
 
--- do your coding :) 
+-- Do your coding :) 
 
 git add .
 
@@ -29,4 +29,4 @@ git rebase master
 
 git push -u origin (the new feature branch name)
 
--- send us a pull request
+-- Send us a pull request...
