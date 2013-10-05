@@ -12,7 +12,7 @@ before_action :set_translation, only: [:vote_up]
     if @translation.votes
       @translation.votes += 1
     else
-      @translation.votes = 0
+      @translation.votes = 1
     end
     if @translation.save
       add_term_to_cookies
