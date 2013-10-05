@@ -1,16 +1,16 @@
 <% @terms.each do |term| %>
   <div class='box'>
-    <h5 class='box-title'>Term: <%= term.name %></h5>
+    <h5 class='box-title'>المصطلح <%= term.name %></h5>
     <ul class="nav nav-tabs nav-stacked">
       <%= nested_form_for term, :class => 'form-horizontal' do |f| %>
         <%= f.fields_for :translations do |translation_form| %>
           <li>
-            <%= translation_form.text_field :name, :placeholder => 'Translation...' %>
+            <%= translation_form.text_field :name, :placeholder => 'الترجمة...' %>
             <%= translation_form.link_to_remove 'X', :class => 'btn btn-danger btn-mini' %>
           </li>
         <% end %>
-        <%= f.link_to_add "Add new translation", :translations, :class => 'btn btn-success btn-mini' %>
-        <%= f.submit 'Save term', :class => 'btn btn-primary btn-mini' %>
+        <%= f.link_to_add "اضغ ترجمة جديدة", :translations, :class => 'btn btn-success btn-mini' %>
+        <%= f.submit 'حفظ المصطلح', :class => 'btn btn-primary btn-mini' %>
       <% end %>
     </ul>
   </div>
