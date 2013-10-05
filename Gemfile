@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
+
 gem 'rails', '4.0.0'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
@@ -13,7 +14,9 @@ gem 'figaro'
 gem 'high_voltage'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'unicorn'
+gem 'nested_form'
 gem 'rails_12factor', group: :production
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]

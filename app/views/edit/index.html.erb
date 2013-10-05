@@ -1,0 +1,31 @@
+<h1>Listing translations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Translations</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @terms.each do |term| %>
+      <tr>
+        <td><%= term.name %></td>
+        <td><%= term.translations.map { |translation| translation.name }.join(', ') %></td>
+        <td>
+          <%= nested_form_for term do |f| %>
+            <%= f.fields_for :translations do |translation_form| %>
+              <%= translation_form.text_field :name %>
+              <%= translation_form.link_to_remove "Remove this translation" %>
+            <% end %>
+            <p><%= f.link_to_add "Add a translation", :translations %></p>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

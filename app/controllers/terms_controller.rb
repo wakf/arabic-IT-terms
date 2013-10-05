@@ -15,6 +15,7 @@ class TermsController < ApplicationController
   # GET /terms/new
   def new
     @term = Term.new
+    @term.translations.build
   end
 
   # GET /terms/1/edit
